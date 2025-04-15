@@ -28,23 +28,27 @@ const ProjectCard = ({ project, darkMode }) => {
           </h3>
           <div className="flex space-x-2">
             {project.data.URLs.Web && (
-              <a href={project.data.URLs.Web} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+              <a href={project.data.URLs.Web} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
                 <FaGlobe />
+                <span className="ml-1">Web</span>
               </a>
             )}
             {project.data.URLs.Itch && (
-              <a href={project.data.URLs.Itch} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+              <a href={project.data.URLs.Itch} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
                 <FaItchIo />
+                <span className="ml-1">Itch</span>
               </a>
             )}
             {project.data.URLs.Gitlab && (
-              <a href={project.data.URLs.Gitlab} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+              <a href={project.data.URLs.Gitlab} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
                 <FaGitlab />
+                <span className="ml-1">GitLab</span>
               </a>
             )}
             {project.data.URLs.Github && (
-              <a href={project.data.URLs.Github} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+              <a href={project.data.URLs.Github} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
                 <FaGithub />
+                <span className="ml-1">GitHub</span>
               </a>
             )}
           </div>
