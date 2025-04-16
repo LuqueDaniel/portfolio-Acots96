@@ -1,9 +1,26 @@
 import LibraryOfBabelVideo from '../assets/TheLibraryofBabelReleaseTrailer.mp4';
-import Maze3DVideo from '../assets/Raylib_Maze3D.mp4';
+import LibraryOfBabelCaption from '../assets/TheLibraryOfBabel_CAPTION.png';
+import Maze3DVideo1 from '../assets/Raylib_Maze3D.mp4';
+import Maze3DCaption1 from '../assets/Raylib_Maze3D_CAPTION.png';
+import Maze3DVideo2 from '../assets/Raylib_Maze3D_SHORT2.mp4';
+import Maze3DCaption2 from '../assets/Raylib_Maze3D_CAPTION2.png';
+import Maze3DVideo3 from '../assets/Raylib_Maze3D_SHORT3.mp4';
+import Maze3DCaption3 from '../assets/Raylib_Maze3D_CAPTION3.png';
 import ParatrooperVideo from '../assets/Raylib_Paratrooper.mp4';
+import ParatrooperCaption from '../assets/Paratrooper_CAPTION.png';
 import CityZombiesImage from '../assets/CityZombies3.png';
 import RPrototyperVideo from '../assets/RPrototyper_Demo01_SHORT.mp4';
-import SciFiGameVideo from '../assets/UE_Scifi002_SHORT.mp4';
+import RPrototyperCaption from '../assets/RPrototyper_CAPTION.png';
+import SciFiGameVideo1 from '../assets/UE_Scifi001_SHORT.mp4';
+import SciFiGameCaption1 from '../assets/UE_Scifi001_CAPTION.png';
+import SciFiGameVideo2 from '../assets/UE_Scifi001_SHORT2.mp4';
+import SciFiGameCaption2 from '../assets/UE_Scifi001_CAPTION2.png';
+import SciFiGameVideo3 from '../assets/UE_Scifi002_SHORT.mp4';
+import SciFiGameCaption3 from '../assets/UE_Scifi002_CAPTION.png';
+import SciFiGameVideo4 from '../assets/UE_Scifi003_SHORT.mp4';
+import SciFiGameCaption4 from '../assets/UE_Scifi003_CAPTION.png';
+import SciFiGameVideo5 from '../assets/UE_Scifi003_SHORT2.mp4';
+import SciFiGameCaption5 from '../assets/UE_Scifi003_CAPTION2.png';
 
 
 export const projects = [
@@ -26,7 +43,8 @@ export const projects = [
     media: [
       {
         type: 'video',
-        url: LibraryOfBabelVideo
+        url: LibraryOfBabelVideo,
+        caption: LibraryOfBabelCaption
       }
     ]
   },
@@ -51,7 +69,18 @@ export const projects = [
     media: [
       {
         type: 'video',
-        url: Maze3DVideo
+        url: Maze3DVideo1,
+        caption: Maze3DCaption1
+      },
+      {
+        type: 'video',
+        url: Maze3DVideo2,
+        caption: Maze3DCaption2
+      },
+      {
+        type: 'video',
+        url: Maze3DVideo3,
+        caption: Maze3DCaption3
       }
     ]
   },
@@ -75,7 +104,8 @@ export const projects = [
     media: [
       {
         type: 'video',
-        url: ParatrooperVideo
+        url: ParatrooperVideo,
+        caption: ParatrooperCaption
       }
     ]
   },
@@ -124,7 +154,8 @@ export const underDevelopmentProjects = [
     media: [
       {
         type: 'video',
-        url: RPrototyperVideo
+        url: RPrototyperVideo,
+        caption: RPrototyperCaption
       }
     ]
   },
@@ -146,7 +177,28 @@ export const underDevelopmentProjects = [
     media: [
       {
         type: 'video',
-        url: SciFiGameVideo
+        url: SciFiGameVideo2,
+        caption: SciFiGameCaption2
+      },
+      {
+        type: 'video',
+        url: SciFiGameVideo1,
+        caption: SciFiGameCaption1
+      },
+      {
+        type: 'video',
+        url: SciFiGameVideo3,
+        caption: SciFiGameCaption3
+      },
+      {
+        type: 'video',
+        url: SciFiGameVideo4,
+        caption: SciFiGameCaption4
+      },
+      {
+        type: 'video',
+        url: SciFiGameVideo5,
+        caption: SciFiGameCaption5
       }
     ]
   }
