@@ -52,9 +52,9 @@ const Portfolio = () => {
         <h2 className="text-xl font-semibold mt-2">Game Programmer</h2>
 
         {/* Información personal en un contenedor */}
-        <div className={`mt-4 p-4 rounded ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-900'} text-center`}>
+        <div className={`p-4 rounded ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-900'} text-center`}>
         <p className="mb-6 text-lg">
-            Hi! I am <strong>Aleix</strong>, a game programmer from <strong>Barcelona, Spain</strong>, focused on <strong>gameplay, systems</strong>, and making games feel amazing to play. 
+            Hi! I am <strong>Aleix</strong>, a game programmer from <strong>Barcelona, Spain</strong>, focused on <strong>gameplay, systems</strong>, and making games feel amazing to play.
             Mainly working with <strong>Unreal Engine</strong> and <strong>C++</strong>, and always looking for ways to push mechanics, feedback, and fun.
           </p>
           <p className="mb-6 text-lg">
@@ -85,7 +85,7 @@ const Portfolio = () => {
           href="https://drive.google.com/file/d/1B83HPk9Cl2jqIxb_E19V75EqK3q3FGXF/view?usp=sharing" // Reemplaza esto con la URL de tu currículum
           target="_blank"
           rel="noopener noreferrer"
-          className={`mt-4 flex items-center justify-center px-6 py-2 transition duration-500 
+          className={`mt-4 flex items-center justify-center px-6 py-2 transition duration-500
             ${darkMode ? 'bg-white text-gray-900 hover:bg-gray-200 border border-gray-300' : 'bg-black text-white hover:bg-gray-800 border border-gray-600'}`}
         >
           <FaFileAlt className="mr-2" />
