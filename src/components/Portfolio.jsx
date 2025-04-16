@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaGitlab, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Importar los íconos
+import { FaGithub, FaGitlab, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa'; // Importar los íconos
 import aleixImage from '../assets/aleix.png'; // Asegúrate de que la ruta sea correcta
 import ProjectCard from './ProjectCard'; // Importar el componente de tarjeta de proyecto
 import { projects, underDevelopmentProjects } from '../data/projectsData';
@@ -53,9 +53,14 @@ const Portfolio = () => {
 
         {/* Información personal en un contenedor */}
         <div className={`mt-4 p-4 rounded ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-900'} text-center`}>
-          <p>
-            Hi! I am Aleix, a game programmer from Barcelona, Spain, focused on gameplay, systems, and making games feel amazing to play. Mainly working with Unreal Engine and C++, and always looking for ways to push mechanics, feedback, and fun.
-            Currently being part of CreekGames as an Unreal dev and working as a Raylib/C++ teacher in a videogames programming degree (CITM – UPC).
+        <p className="mb-6 text-lg">
+            Hi! I am <strong>Aleix</strong>, a game programmer from <strong>Barcelona, Spain</strong>, focused on <strong>gameplay, systems</strong>, and making games feel amazing to play. 
+            Mainly working with <strong>Unreal Engine</strong> and <strong>C++</strong>, and always looking for ways to push mechanics, feedback, and fun.
+          </p>
+          <p className="mb-6 text-lg">
+            Currently being part of <a href="https://creekgames.com" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline"><strong>CreekGames</strong></a> as an <strong>Unreal dev</strong> and working as a <strong>Raylib/C++ teacher</strong> in a videogames programming degree (<a href="https://citm.upc.edu" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline"><strong>CITM – UPC</strong></a>).
+          </p>
+          <p className="text-lg">
             Feel free to contact me for anything you want!
           </p>
         </div>
@@ -80,9 +85,10 @@ const Portfolio = () => {
           href="https://drive.google.com/file/d/1B83HPk9Cl2jqIxb_E19V75EqK3q3FGXF/view?usp=sharing" // Reemplaza esto con la URL de tu currículum
           target="_blank"
           rel="noopener noreferrer"
-          className={`mt-4 px-6 py-2 transition duration-500 
+          className={`mt-4 flex items-center justify-center px-6 py-2 transition duration-500 
             ${darkMode ? 'bg-white text-gray-900 hover:bg-gray-200 border border-gray-300' : 'bg-black text-white hover:bg-gray-800 border border-gray-600'}`}
         >
+          <FaFileAlt className="mr-2" />
           Resume
         </a>
       </motion.div>
