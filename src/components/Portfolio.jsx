@@ -52,7 +52,7 @@ const Portfolio = () => {
         <h2 className="text-xl font-semibold mt-2">Game Programmer</h2>
 
         {/* Información personal en un contenedor */}
-        <div className={`p-4 rounded ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-900'} text-center`}>
+        <div className={`mt-4 p-4 rounded ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-900'} text-center`}>
         <p className="mb-6 text-lg">
             Hi! I am <strong>Aleix</strong>, a game programmer from <strong>Barcelona, Spain</strong>, focused on <strong>gameplay, systems</strong>, and making games feel amazing to play.
             Mainly working with <strong>Unreal Engine</strong> and <strong>C++</strong>, and always looking for ways to push mechanics, feedback, and fun.
