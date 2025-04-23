@@ -4,8 +4,6 @@ import { FaGithub, FaGitlab, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-ico
 import aleixImage from '../assets/aleix.png';
 import ProjectCard from './ProjectCard';
 import { projects, underDevelopmentProjects } from '../data/projectsData';
-import { Canvas } from '@react-three/fiber';
-import { Box } from '@react-three/drei';
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -30,14 +28,6 @@ const Portfolio = () => {
 
   return (
     <div className={`relative min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} transition duration-500`}>
-      <Canvas style={{ height: '100vh', width: '100%', position: 'absolute', top: 0, left: 0, zIndex: -1 }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
-        <Box args={[1, 1, 1]} position={[0, 0, 0]}>
-          <meshStandardMaterial attach="material" color="orange" />
-        </Box>
-      </Canvas>
-
       <motion.div
         className="flex flex-col items-center mb-8 mt-20 px-4 max-w-4xl mx-auto"
         initial={{ opacity: 0, scale: 0.9, y: -50 }}
