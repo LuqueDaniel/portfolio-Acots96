@@ -92,7 +92,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="mt-4 p-4 rounded bg-gray-700 text-white text-center"
+          className="mt-4 p-4 text-white text-center"
           onAnimationComplete={() => setShowProjects(true)}
         >
           <p className="mb-6 text-lg">
