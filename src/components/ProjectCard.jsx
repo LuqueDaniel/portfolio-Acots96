@@ -98,11 +98,11 @@ const ProjectCard = ({ project, darkMode }) => {
         </div>
         
         <div className={`mt-2 p-2 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
-          <p>{project.data.ShortDescription}</p>
+          <p className="text-justify">{project.data.ShortDescription}</p>
         </div>
 
         <h4 className="mt-4 font-semibold">Description:</h4>
-        <p className="mb-4">{project.data.Description}</p>
+        <p className="mb-4 text-justify">{project.data.Description}</p>
 
         <hr className="my-4 border-gray-300" />
 
