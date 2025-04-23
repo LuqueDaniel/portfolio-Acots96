@@ -4,43 +4,35 @@ import '@justinribeiro/lite-youtube';
 
 const ProjectCard = ({ project, darkMode }) => {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
-  const media = project.media; // Obtener el array de medios
+  const media = project.media;
   const videoRef = useRef(null);
-  const [loadingThumbnail, setLoadingThumbnail] = useState(false); // Estado para manejar la carga de miniaturas
+  const [loadingThumbnail, setLoadingThumbnail] = useState(false);
 
   const handleMediaChange = (index) => {
-    console.log(`Cambiando a media en el índice: ${index}`); // Log del índice seleccionado
-    // Pausar el video actual si es que hay uno
     if (videoRef.current) {
-      console.log('Pausando video actual'); // Log para pausar el video
       videoRef.current.pause();
-      videoRef.current.currentTime = 0; // Reiniciar el tiempo del video
+      videoRef.current.currentTime = 0;
     }
 
-    setLoadingThumbnail(true); // Indicar que se está cargando una nueva miniatura
-    setCurrentMediaIndex(index); // Cambiar al medio correspondiente
+    setLoadingThumbnail(true);
+    setCurrentMediaIndex(index);
 
-    // Esperar a que el video esté listo para reproducir
     if (media[index].type === 'video' && videoRef.current) {
-      videoRef.current.load(); // Cargar el nuevo video
-      videoRef.current.play(); // Reproducir el nuevo video
+      videoRef.current.load();
+      videoRef.current.play();
     }
 
-    console.log(`Índice actual de media: ${currentMediaIndex}`); // Log del índice actual
-
-    // Simular un retraso en la carga de la miniatura
     setTimeout(() => {
-      setLoadingThumbnail(false); // Indicar que la miniatura ha terminado de cargar
-    }, 500); // Ajusta el tiempo según sea necesario
+      setLoadingThumbnail(false);
+    }, 500);
   };
 
   return (
-    <div className={`group rounded-none shadow-lg mb-6 mx-2 w-full sm:w-1/3 transition duration-500 ${darkMode ? 'bg-gray-800' : 'bg-white'} border-2 border-transparent hover:border-cyan-300`}>
+    <div className={`group rounded-none shadow-lg mb-6 mx-2 w-full sm:w-full lg:w-1/3 transition duration-500 ${darkMode ? 'bg-gray-800' : 'bg-white'} border-2 border-transparent hover:border-cyan-300`}>
       <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-        {/* Video o imagen sin efecto de desaturación */}
         {media[currentMediaIndex].type === 'video' ? (
           <>
-            <div className="absolute top-0 left-0 w-full h-full bg-black" /> {/* Fotograma negro */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black" />
             <video ref={videoRef} className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-75" autoPlay loop muted>
               <source src={media[currentMediaIndex].url} type="video/mp4" />
               Tu navegador no soporta el elemento de video.
@@ -51,17 +43,16 @@ const ProjectCard = ({ project, darkMode }) => {
         )}
       </div>
 
-      {/* Carrusel siempre visible entre el video o la imagen y el nombre del proyecto */}
       <div className="flex justify-center mt-2 z-10">
         {media.map((item, index) => (
           <button 
             key={index} 
             className={`w-18 h-12 mx-1 rounded ${currentMediaIndex === index ? 'border-2 border-blue-500' : 'border border-transparent'} transition duration-300 relative ${currentMediaIndex === index ? 'border-2 border-blue-500' : 'hover:border-gray-500'}`} 
-            onClick={() => handleMediaChange(index)} // Cambiar al medio correspondiente al hacer clic
+            onClick={() => handleMediaChange(index)}
           >
             <div className="relative w-full h-full">
               <img 
-                src={item.type === 'video' ? item.caption : item.url} // Mostrar caption si es video
+                src={item.type === 'video' ? item.caption : item.url}
                 alt={`Thumbnail ${index}`} 
                 className={`w-full h-full object-cover rounded`} 
               />
@@ -76,7 +67,6 @@ const ProjectCard = ({ project, darkMode }) => {
       <div className={`p-6 transition duration-500 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'}`}>
         <div className="flex justify-between items-center">
           <h3 className="text-2xl font-semibold group-hover:text-cyan-300">
-            {/* Se ha eliminado el hipervínculo del nombre del proyecto */}
             {project.data.Title}
           </h3>
           <div className="flex space-x-2">
@@ -107,7 +97,6 @@ const ProjectCard = ({ project, darkMode }) => {
           </div>
         </div>
         
-        {/* ShortDescription con fondo gris claro */}
         <div className={`mt-2 p-2 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
           <p>{project.data.ShortDescription}</p>
         </div>
@@ -115,7 +104,6 @@ const ProjectCard = ({ project, darkMode }) => {
         <h4 className="mt-4 font-semibold">Description:</h4>
         <p className="mb-4">{project.data.Description}</p>
 
-        {/* Separador entre Descripción y Aspectos Técnicos */}
         <hr className="my-4 border-gray-300" />
 
         <h4 className="mt-4 font-semibold">Technical Aspects:</h4>

@@ -9,6 +9,7 @@ import Maze3DCaption3 from '../assets/Raylib_Maze3D_CAPTION3.png';
 import ParatrooperVideo from '../assets/Raylib_Paratrooper.mp4';
 import ParatrooperCaption from '../assets/Paratrooper_CAPTION.png';
 import CityZombiesImage from '../assets/CityZombies3.png';
+import CityZombiesVideo from '../assets/CityZombies001.mp4';
 import RPrototyperVideo from '../assets/RPrototyper_Demo01_SHORT.mp4';
 import RPrototyperCaption from '../assets/RPrototyper_CAPTION.png';
 import SciFiGameVideo1 from '../assets/UE_Scifi001_SHORT.mp4';
@@ -128,8 +129,9 @@ export const projects = [
     },
     media: [
       {
-        type: 'image',
-        url: CityZombiesImage
+        type: 'video',
+        url: CityZombiesVideo,
+        caption: CityZombiesImage
       }
     ]
   }
