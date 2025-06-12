@@ -22,6 +22,13 @@ import SciFiGameVideo4 from '../assets/UE_Scifi003_SHORT.mp4';
 import SciFiGameCaption4 from '../assets/UE_Scifi003_CAPTION.png';
 import SciFiGameVideo5 from '../assets/UE_Scifi003_SHORT2.mp4';
 import SciFiGameCaption5 from '../assets/UE_Scifi003_CAPTION2.png';
+import SciFiRogueGameVideo1 from '../assets/UE_ScifiRL_Game_00.mp4';
+import SciFiRogueGameCaption1 from '../assets/UE_ScifiRL_Game_00_Img.png';
+import SciFiRogueGameVideo2 from '../assets/UE_ScifiRL_Game_01.mp4';
+import SciFiRogueGameCaption2 from '../assets/UE_ScifiRL_Game_01_Img.png';
+import SciFiRogueGameVideo3 from '../assets/UE_ScifiRL_Lab_00.mp4';
+import SciFiRogueGameCaption3 from '../assets/UE_ScifiRL_Lab_00_Img.png';
+
 
 
 export const projects = [
@@ -201,6 +208,39 @@ export const underDevelopmentProjects = [
         type: 'video',
         url: SciFiGameVideo5,
         caption: SciFiGameCaption5
+      }
+    ]
+  },
+  {
+    name: 'Sci-fi roguelite game (Unreal)',
+    website: 'https://github.com/Acots96/Unreal_ScifiRL',
+    data: {
+      Title: 'Sci-fi roguelite game (Unreal)',
+      ShortDescription: 'A tiny 3rd person top-down action roguelite game where you start in a laboratory where you can talk to the LabLead, improve your skills, and go to the arena to fight until you’re killed. Mainly developed with blueprints as it is an early prototype.',
+      Description: 'This is a project I am developing to make a full little game with all the basic features such as skills and items system, combat, UI, waves of enemies, save system, etc.',
+      TechnicalAspects: [
+        'Flocking algorithm to prevent the drones from overlapping.',
+        'Basic Bezier curves implementation for the missiles movement.'
+      ],
+      URLs: {
+        Github: 'https://github.com/Acots96/Unreal_ScifiRL',
+      }
+    },
+    media: [
+      {
+        type: 'video',
+        url: SciFiRogueGameVideo1,
+        caption: SciFiRogueGameCaption1
+      },
+      {
+        type: 'video',
+        url: SciFiRogueGameVideo2,
+        caption: SciFiRogueGameCaption2
+      },
+      {
+        type: 'video',
+        url: SciFiRogueGameVideo3,
+        caption: SciFiRogueGameCaption3
       }
     ]
   }
