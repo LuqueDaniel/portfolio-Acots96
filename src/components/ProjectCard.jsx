@@ -8,6 +8,21 @@ const ProjectCard = ({ project, darkMode }) => {
   const videoRef = useRef(null);
   const [loadingThumbnail, setLoadingThumbnail] = useState(false);
 
+  useEffect(() => {
+    setCurrentMediaIndex(0);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+    if (project.media && project.media[0] && project.media[0].type === 'video') {
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.play();
+        }
+      }, 100);
+    }
+  }, [project]);
+
   const handleMediaChange = (index) => {
     if (videoRef.current) {
       videoRef.current.pause();

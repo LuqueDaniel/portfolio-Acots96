@@ -29,11 +29,17 @@ import SciFiRogueGameCaption2 from '../assets/UE_ScifiRL_Game_01_Img.png';
 import SciFiRogueGameVideo3 from '../assets/UE_ScifiRL_Lab_00.mp4';
 import SciFiRogueGameCaption3 from '../assets/UE_ScifiRL_Lab_00_Img.png';
 
-
+export const PROJECT_CATEGORIES = [
+  'Main',
+  'Unreal/C++',
+  'Unity'
+];
 
 export const projects = [
   {
     name: 'The Library of Babel (Unity)',
+    categories: ['Main', 'Unity'],
+    priority: 1,
     website: 'https://tanukigamestudio.com/our-games/the-library-of-babel',
     data: {
       Title: 'The Library of Babel (Unity)',
@@ -59,6 +65,8 @@ export const projects = [
   {
     name: 'Maze3D',
     year: 2025,
+    categories: ['Main', 'Unreal/C++'],
+    priority: 4,
     website: 'https://acots96.itch.io/maze3d',
     data: {
       Title: 'Maze3D (Raylib/C++)',
@@ -95,6 +103,8 @@ export const projects = [
   {
     name: 'Paratrooper',
     year: 2025,
+    categories: ['Unreal/C++'],
+    priority: 6,
     website: 'https://acots96.itch.io/paratrooper',
     data: {
       Title: 'Paratrooper (Raylib/C++)',
@@ -120,6 +130,8 @@ export const projects = [
   {
     name: 'CityZombies (Unity)',
     year: 2021,
+    categories: ['Unity'],
+    priority: 2,
     website: 'https://acots96.itch.io/cityzombies',
     data: {
       Title: 'CityZombies (Unity)',
@@ -141,12 +153,11 @@ export const projects = [
         caption: CityZombiesImage
       }
     ]
-  }
-];
-
-export const underDevelopmentProjects = [
+  },
   {
     name: 'RPrototyper (Raylib/C++)',
+    categories: ['Unreal/C++'],
+    priority: 5,
     website: 'https://github.com/Acots96/RPrototyper',
     data: {
       Title: 'RPrototyper (Raylib/C++)',
@@ -170,6 +181,8 @@ export const underDevelopmentProjects = [
   },
   {
     name: 'Sci-fi game (Unreal)',
+    categories: ['Main', 'Unreal/C++'],
+    priority: 3,
     website: 'https://gitlab.com/Acots96/projectutapau',
     data: {
       Title: 'Sci-fi game (Unreal)',
@@ -213,6 +226,8 @@ export const underDevelopmentProjects = [
   },
   {
     name: 'Sci-fi roguelite game (Unreal)',
+    categories: ['Main', 'Unreal/C++'],
+    priority: 2,
     website: 'https://github.com/Acots96/Unreal_ScifiRL',
     data: {
       Title: 'Sci-fi roguelite game (Unreal)',

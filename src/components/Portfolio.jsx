@@ -3,12 +3,14 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaGitlab, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 import aleixImage from '../assets/aleix.png';
 import ProjectCard from './ProjectCard';
-import { projects, underDevelopmentProjects } from '../data/projectsData';
+import { projects, PROJECT_CATEGORIES } from '../data/projectsData';
+import CategoryTabs from './CategoryTabs';
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [scrollEnabled, setScrollEnabled] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(PROJECT_CATEGORIES[0]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -26,10 +28,14 @@ const Portfolio = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const filteredProjects = projects
+    .filter((project) => project.priority >= 0 && project.categories.includes(selectedCategory))
+    .sort((a, b) => a.priority - b.priority);
+
   return (
     <div className={`relative min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'} transition duration-500`}>
       <motion.div
-        className="flex flex-col items-center mb-8 mt-20 px-4 max-w-4xl mx-auto"
+        className="flex flex-col items-center mb-4 mt-20 px-4 max-w-4xl mx-auto"
         initial={{ opacity: 0, scale: 0.9, y: -50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -109,31 +115,23 @@ const Portfolio = () => {
       </motion.div>
 
       {scrollEnabled && showProjects && (
-        <motion.div
-          className="flex flex-wrap justify-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} darkMode={darkMode} />
-          ))}
-
-          <div className="my-8">
-            <hr className="border-t-2 border-gray-300" />
-            <h2 className="text-2xl font-bold text-center mt-4">Under Development</h2>
-            <motion.div
-              className="flex flex-wrap justify-center mt-4"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              {underDevelopmentProjects.map((project, index) => (
-                <ProjectCard key={index} project={project} darkMode={darkMode} />
-              ))}
-            </motion.div>
-          </div>
-        </motion.div>
+        <>
+          <CategoryTabs
+            sections={PROJECT_CATEGORIES}
+            selectedSection={selectedCategory}
+            onSelectSection={setSelectedCategory}
+          />
+          <motion.div
+            className="flex flex-wrap justify-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {filteredProjects.map((project, index) => (
+              <ProjectCard key={project.name + '-' + selectedCategory} project={project} darkMode={darkMode} />
+            ))}
+          </motion.div>
+        </>
       )}
     </div>
   );
