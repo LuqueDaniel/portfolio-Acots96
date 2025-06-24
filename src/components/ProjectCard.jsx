@@ -48,7 +48,7 @@ const ProjectCard = ({ project, darkMode }) => {
         {media[currentMediaIndex].type === 'video' ? (
           <>
             <div className="absolute top-0 left-0 w-full h-full bg-black" />
-            <video ref={videoRef} className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-75" autoPlay loop muted>
+            <video ref={videoRef} className="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-300 hover:opacity-100 opacity-75" autoPlay loop muted>
               <source src={media[currentMediaIndex].url} type="video/mp4" />
               Tu navegador no soporta el elemento de video.
             </video>
