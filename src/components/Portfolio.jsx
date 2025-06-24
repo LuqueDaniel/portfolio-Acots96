@@ -106,7 +106,7 @@ const Portfolio = () => {
             Mainly working with <strong>Unreal Engine</strong> and <strong>C++</strong>, and always looking for ways to push mechanics, feedback, and fun.
           </p>
           <p className="mb-6 text-lg">
-            Currently being part of <a href="https://creekgames.com" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline"><strong>CreekGames</strong></a> as an <strong>Unreal dev</strong> and working as a <strong>Raylib/C++ teacher</strong> in a videogames programming degree (<a href="https://citm.upc.edu" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline"><strong>CITM – UPC</strong></a>).
+            Currently being part of <a href="https://www.linkedin.com/company/creekgames/about" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline"><strong>CreekGames</strong></a> as an <strong>Unreal dev</strong> and working as a <strong>Raylib/C++ teacher</strong> in a videogames programming degree (<a href="https://citm.upc.edu" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline"><strong>CITM – UPC</strong></a>).
           </p>
           <p className="text-lg">
             Feel free to contact me for anything you want!
