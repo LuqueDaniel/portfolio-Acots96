@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaGitlab, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaGitlab, FaLinkedin, FaEnvelope, FaFileAlt, FaItchIo } from 'react-icons/fa';
 import aleixImage from '../assets/aleix.png';
 import ProjectCard from './ProjectCard';
 import { projects, PROJECT_CATEGORIES } from '../data/projectsData';
@@ -53,6 +53,12 @@ const Portfolio = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <div className="flex items-center mb-2">
+              <a href="https://acots96.itch.io/" target="_blank" rel="noopener noreferrer">
+                <FaItchIo className="text-2xl transition duration-500 hover:text-red-600" />
+              </a>
+              <span className="ml-2">Itch</span>
+            </div>
+            <div className="flex items-center mb-2">
               <a href="https://gitlab.com/Acots96" target="_blank" rel="noopener noreferrer">
                 <FaGitlab className="text-2xl transition duration-500 hover:text-orange-500" />
               </a>
@@ -60,7 +66,7 @@ const Portfolio = () => {
             </div>
             <div className="flex items-center mb-2">
               <a href="https://github.com/Acots96" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-2xl transition duration-500 hover:text-purple-600" />
+                <FaGithub className="text-2xl transition duration-500 hover:text-gray-400" />
               </a>
               <span className="ml-2">GitHub</span>
             </div>
@@ -72,13 +78,13 @@ const Portfolio = () => {
             </div>
             <div className="flex items-center mb-2">
               <a href="mailto:acots96@gmail.com" target="_blank" rel="noopener noreferrer">
-                <FaEnvelope className="text-2xl transition duration-500 hover:text-gray-500" />
+                <FaEnvelope className="text-2xl transition duration-500 hover:text-gray-400" />
               </a>
               <span className="ml-2">Email</span>
             </div>
             <div className="flex items-center mb-2">
               <a href="https://drive.google.com/file/d/1B83HPk9Cl2jqIxb_E19V75EqK3q3FGXF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <FaFileAlt className="text-2xl transition duration-500 hover:text-gray-500" />
+                <FaFileAlt className="text-2xl transition duration-500 hover:text-gray-400" />
               </a>
               <span className="ml-2">Resume</span>
             </div>
