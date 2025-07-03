@@ -306,7 +306,7 @@ export const projects = [
       Description: 'This is a tiny real-time multiplayer game made with Unity and C# during my master degree where you simply control tanks and you can play with your friends as a team or all vs all.',
       TechnicalAspects: [
         'Use of the Mirror library/plugin for Unity, which allows for real-time multiplayer handling some of the most important and tricky aspects like connection, synchronization, RPC calls, etc (Check it out here: <a href="https://assetstore.unity.com/packages/tools/network/mirror-129321" target="_blank" rel="noopener noreferrer">https://assetstore.unity.com/packages/tools/network/mirror-129321</a>)',
-        'I implemented 3 game types: Local, LAN and WAN (last one requires an open port and I used it to test it, not available anymore.',
+        'I implemented 3 game types: Local, LAN and WAN (last one requires an open port and I used it to test it, not available anymore).',
       ],
       URLs: {
         Github: 'https://github.com/Acots96/UOC-Multijugador'
