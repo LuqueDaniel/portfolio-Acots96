@@ -124,9 +124,11 @@ const ProjectCard = ({ project, darkMode }) => {
         <h4 className="mt-4 font-semibold">Technical Aspects:</h4>
         <ul className="list-disc list-inside mb-4">
           {project.data.TechnicalAspects.map((aspect, index) => (
-            <li key={index} className={`py-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'} transition duration-300 hover:text-cyan-500`}>
-              {aspect}
-            </li>
+            <li
+              key={index}
+              className={`py-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'} transition duration-300 hover:text-cyan-500`}
+              dangerouslySetInnerHTML={{ __html: aspect }}
+            />
           ))}
         </ul>
       </div>

@@ -28,6 +28,15 @@ import SciFiRogueGameVideo2 from '../assets/UE_ScifiRL_Game_01.mp4';
 import SciFiRogueGameCaption2 from '../assets/UE_ScifiRL_Game_01_Img.png';
 import SciFiRogueGameVideo3 from '../assets/UE_ScifiRL_Lab_00.mp4';
 import SciFiRogueGameCaption3 from '../assets/UE_ScifiRL_Lab_00_Img.png';
+import KluestVideo from '../assets/KluestTrailer.mp4';
+import KluestCaption from '../assets/KluestCaption.png';
+import TanksVideo1 from '../assets/Unity_TanksMultiplayer001_SHORT.mp4';
+import TanksCaption1 from '../assets/Unity_TanksMultiplayer_CAPTION.png';
+import TanksVideo2 from '../assets/Unity_TanksMultiplayer002_SHORT.mp4';
+import TanksCaption2 from '../assets/Unity_TanksMultiplayer_CAPTION2.png';
+import TanksVideo3 from '../assets/Unity_TanksMultiplayer003_SHORT.mp4';
+import TanksCaption3 from '../assets/Unity_TanksMultiplayer_CAPTION3.png';
+
 
 export const PROJECT_CATEGORIES = [
   'Main',
@@ -131,7 +140,7 @@ export const projects = [
     name: 'CityZombies (Unity)',
     year: 2021,
     categories: ['Unity'],
-    priority: 2,
+    priority: 4,
     website: 'https://acots96.itch.io/cityzombies',
     data: {
       Title: 'CityZombies (Unity)',
@@ -256,6 +265,68 @@ export const projects = [
         type: 'video',
         url: SciFiRogueGameVideo3,
         caption: SciFiRogueGameCaption3
+      }
+    ]
+  },
+  {
+    name: 'Kluest (Unity)',
+    year: 2021,
+    categories: ['Unity'],
+    priority: 2,
+    website: 'https://kluest.com',
+    data: {
+      Title: 'Kluest (Unity)',
+      ShortDescription: 'Geolocated social VR/AR app made for mobile (Android & iOS) to create your own adventures in the real world.',
+      Description: 'I mainly implemented features in the client such as UI menus, integration with geolocation APIs (GoogleMaps, OpenStreetMap), design and implementation of the world-sized hexagonal grid (drawn and updated in real-time). Also features in the backend such as part of the architecture, database (first SQL and then MongoDB), endpoints required by the client.',
+      TechnicalAspects: [
+        'Client-Server app with Unity and ASP.NET Core MVC along with MongoDB',
+        'Geolocation using APIs such as GoogleMaps and OpenStreetMap.',
+      ],
+      URLs: {
+        Web: 'https://kluest.com'
+      }
+    },
+    media: [
+      {
+        type: 'video',
+        url: KluestVideo,
+        caption: KluestCaption
+      }
+    ]
+  },
+  {
+    name: 'Tanks multiplayer game (Unity)',
+    year: 2021,
+    categories: ['Unity'],
+    priority: 3,
+    website: 'https://github.com/Acots96/UOC-Multijugador',
+    data: {
+      Title: 'Tanks multiplayer game (Unity)',
+      ShortDescription: 'A tiny multiplayer game made with Mirror I made during my master degree.',
+      Description: 'This is a tiny real-time multiplayer game made with Unity and C# during my master degree where you simply control tanks and you can play with your friends as a team or all vs all.',
+      TechnicalAspects: [
+        'Use of the Mirror library/plugin for Unity, which allows for real-time multiplayer handling some of the most important and tricky aspects like connection, synchronization, RPC calls, etc (Check it out here: <a href="https://assetstore.unity.com/packages/tools/network/mirror-129321" target="_blank" rel="noopener noreferrer">https://assetstore.unity.com/packages/tools/network/mirror-129321</a>)',
+        'I implemented 3 game types: Local, LAN and WAN (last one requires an open port and I used it to test it, not available anymore.',
+      ],
+      URLs: {
+        Github: 'https://github.com/Acots96/UOC-Multijugador'
+      }
+    },
+    media: [
+      {
+        type: 'video',
+        url: TanksVideo1,
+        caption: TanksCaption1
+      },
+      {
+        type: 'video',
+        url: TanksVideo2,
+        caption: TanksCaption2
+      },
+      {
+        type: 'video',
+        url: TanksVideo3,
+        caption: TanksCaption3
       }
     ]
   }
