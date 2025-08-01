@@ -49,7 +49,7 @@ export const projects = [
     name: 'The Library of Babel (Unity)',
     categories: ['Main', 'Unity'],
     priority: 1,
-    website: 'https://tanukigamestudio.com/our-games/the-library-of-babel',
+    website: 'https://store.steampowered.com/app/1822030/The_Library_of_Babel/',
     data: {
       Title: 'The Library of Babel (Unity)',
       ShortDescription: 'A 2D stealth platformer graphic adventure published in 2023 by TanukiGameStudio and NeonDoctrine for PC and consoles.',
@@ -60,7 +60,7 @@ export const projects = [
         'Multi-platform release including Steam, EpicGames, PS4, Xbox, Switch, and iPhone.'
       ],
       URLs: {
-        Web: 'https://tanukigamestudio.com/our-games/the-library-of-babel',
+        Web: 'https://store.steampowered.com/app/1822030/The_Library_of_Babel/',
       }
     },
     media: [
