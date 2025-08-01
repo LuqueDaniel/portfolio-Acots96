@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaGlobe, FaItchIo, FaGitlab, FaGithub, FaPlay } from 'react-icons/fa';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { FaGlobe, FaItchIo, FaGitlab, FaGithub, FaPlay, FaSteam } from 'react-icons/fa';
 import '@justinribeiro/lite-youtube';
 
 const ProjectCard = ({ project, darkMode }) => {
@@ -42,6 +42,14 @@ const ProjectCard = ({ project, darkMode }) => {
     }, 500);
   };
 
+  const links = useMemo(() => [
+    { key: 'Web', url: project.data.URLs.Web, icon: <FaGlobe />, label: 'Web' },
+    { key: 'Itch', url: project.data.URLs.Itch, icon: <FaItchIo />, label: 'Itch' },
+    { key: 'Gitlab', url: project.data.URLs.Gitlab, icon: <FaGitlab />, label: 'GitLab' },
+    { key: 'Github', url: project.data.URLs.Github, icon: <FaGithub />, label: 'GitHub' },
+    { key: 'Steam', url: project.data.URLs.Steam, icon: <FaSteam />, label: 'Steam' },
+  ], [project]);
+
   return (
     <div className={`group rounded-none shadow-lg mb-6 mx-2 w-full sm:w-full lg:w-1/3 transition duration-500 ${darkMode ? 'bg-gray-800' : 'bg-white'} border-2 border-transparent hover:border-cyan-300`}>
       <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
@@ -60,16 +68,16 @@ const ProjectCard = ({ project, darkMode }) => {
 
       <div className="flex justify-center mt-2 z-10">
         {media.map((item, index) => (
-          <button 
-            key={index} 
-            className={`w-18 h-12 mx-1 rounded ${currentMediaIndex === index ? 'border-2 border-blue-500' : 'border border-transparent'} transition duration-300 relative ${currentMediaIndex === index ? 'border-2 border-blue-500' : 'hover:border-gray-500'}`} 
+          <button
+            key={index}
+            className={`w-18 h-12 mx-1 rounded ${currentMediaIndex === index ? 'border-2 border-blue-500' : 'border border-transparent'} transition duration-300 relative ${currentMediaIndex === index ? 'border-2 border-blue-500' : 'hover:border-gray-500'}`}
             onClick={() => handleMediaChange(index)}
           >
             <div className="relative w-full h-full">
-              <img 
+              <img
                 src={item.type === 'video' ? item.caption : item.url}
-                alt={`Thumbnail ${index}`} 
-                className={`w-full h-full object-cover rounded`} 
+                alt={`Thumbnail ${index}`}
+                className={`w-full h-full object-cover rounded`}
               />
               {item.type === 'video' && (
                 <FaPlay className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl" />
@@ -85,33 +93,24 @@ const ProjectCard = ({ project, darkMode }) => {
             {project.data.Title}
           </h3>
           <div className="flex space-x-2">
-            {project.data.URLs.Web && (
-              <a href={project.data.URLs.Web} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
-                <FaGlobe />
-                <span className="ml-1">Web</span>
-              </a>
-            )}
-            {project.data.URLs.Itch && (
-              <a href={project.data.URLs.Itch} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
-                <FaItchIo />
-                <span className="ml-1">Itch</span>
-              </a>
-            )}
-            {project.data.URLs.Gitlab && (
-              <a href={project.data.URLs.Gitlab} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
-                <FaGitlab />
-                <span className="ml-1">GitLab</span>
-              </a>
-            )}
-            {project.data.URLs.Github && (
-              <a href={project.data.URLs.Github} target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300">
-                <FaGithub />
-                <span className="ml-1">GitHub</span>
-              </a>
+            {links.map(
+              ({ key, url, icon, label }) =>
+                url && (
+                  <a
+                    key={key}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-white hover:text-gray-300"
+                  >
+                    {icon}
+                    <span className="ml-1">{label}</span>
+                  </a>
+                )
             )}
           </div>
         </div>
-        
+
         <div className={`mt-2 p-2 rounded ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
           <p className="text-justify">{project.data.ShortDescription}</p>
         </div>

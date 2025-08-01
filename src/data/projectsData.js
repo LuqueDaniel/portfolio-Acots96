@@ -60,7 +60,7 @@ export const projects = [
         'Multi-platform release including Steam, EpicGames, PS4, Xbox, Switch, and iPhone.'
       ],
       URLs: {
-        Web: 'https://store.steampowered.com/app/1822030/The_Library_of_Babel/',
+        Steam: 'https://store.steampowered.com/app/1822030/The_Library_of_Babel/',
       }
     },
     media: [
